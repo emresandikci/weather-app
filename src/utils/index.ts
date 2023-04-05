@@ -11,3 +11,7 @@ export enum HTTP_STATUS {
   NOT_FOUND = 404,
   INTERNAL_SERVER_ERROR = 500,
 }
+export enum QUERY_KEY_TYPES {
+  current = 'current',
+  forecast = 'forecast',
+}
