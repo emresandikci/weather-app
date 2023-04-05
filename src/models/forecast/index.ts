@@ -1,4 +1,4 @@
-export interface IForecast {
+export default interface IForecast {
   location: {
     name: string;
     region: string;

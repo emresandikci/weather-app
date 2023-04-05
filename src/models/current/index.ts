@@ -1,4 +1,4 @@
-export interface ICurrent {
+export default interface ICurrentWeather {
   location: {
     name: string;
     region: string;
