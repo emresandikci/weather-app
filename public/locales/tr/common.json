@@ -1,0 +1,16 @@
+{
+  "appName": "Hava Durumu Uygulaması",
+  "message": {
+    "fail": "Bir şeyler yanlış gitti!"
+  },
+  "errors": {
+    "notFound": {
+      "title": "404 Hata!",
+      "description": "Üzgünüz, sayfa mevcut değil."
+    },
+    "notData": {
+      "title": "Veri Yok",
+      "description": "Üzgünüz, veri mevcut değil."
+    }
+  }
+}

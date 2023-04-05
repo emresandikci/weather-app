@@ -1,0 +1,16 @@
+{
+  "appName": "Weather App",
+  "message": {
+    "fail": "Something went wrong!"
+  },
+  "errors": {
+    "notFound": {
+      "title": "404 Oops!",
+      "description": "Sorry, the page is not exist."
+    },
+    "notData": {
+      "title": "No Data",
+      "description": "Sorry, data is not exist."
+    }
+  }
+}
