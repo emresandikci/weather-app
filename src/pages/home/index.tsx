@@ -1,11 +1,10 @@
-import { DailyWeather } from 'components';
-import CurrentWeather from 'components/currentWeather';
+import { DailyWeather, CurrentWeather, GeoLocationLoading } from 'components';
+
 import { useGeoLocation, useGetIp, useInterval, useWindowBlurFocus } from 'hooks';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useForecast } from 'store';
 
-import { FaSearchLocation } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import { useAppContext } from 'context/appContext';
 
@@ -68,21 +67,14 @@ function Home() {
     }
   }, [isLocationLoading, latitude, locationError, longitude, t, ip]);
 
+  if (isLocationLoading) return <GeoLocationLoading />;
+
   return (
     <div>
       {weather && (
         <div className="flex h-screen flex-col justify-between pb-20 children:m-5">
           <DailyWeather forcastday={weather?.forecast?.forecastday} />
-
           <CurrentWeather weather={weather} className="mb-5" />
-        </div>
-      )}
-      {isLocationLoading && (
-        <div className="flex h-screen items-center justify-center text-slate-200">
-          <div className="text-center">
-            <FaSearchLocation className="animate-ping" size={30} color="white" />
-            <p>{t('common:gettingLocationInformation')}</p>
-          </div>
         </div>
       )}
     </div>
