@@ -4,7 +4,7 @@ interface IWeatherDegree {
 export default function WeatherDegree({ degree }: IWeatherDegree) {
   return (
     <div>
-      <span className="text-8xl drop-shadow-md">{degree}&deg;</span>
+      <span className="drop-shadow-md mobile:text-6xl desktop:text-8xl">{degree}&deg;</span>
     </div>
   );
 }

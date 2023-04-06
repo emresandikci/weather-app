@@ -13,7 +13,7 @@ export default function CurrentWeather({ weather, ...props }: ICurrentWeather) {
 
   return (
     <div {...props}>
-      <div className="flex items-center gap-x-4 text-white">
+      <div className="flex flex-wrap items-center gap-4 text-white">
         <WeatherPhoto condition={weather.current.condition} />
         <WeatherDegree degree={weather.current.temp_c || 0} />
         <WeatherLocation location={weather.location} lastUpdateAt={weather.current.last_updated} />

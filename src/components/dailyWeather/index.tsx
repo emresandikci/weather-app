@@ -12,16 +12,23 @@ export default function DailyWeather({ forcastday, ...props }: IDailyWeather) {
   if (!forcastday) return null;
 
   return (
-    <div className="flex flex-col gap-y-7 text-slate-100 drop-shadow-sm" {...props}>
-      <h1 className="ml-10 text-white drop-shadow-md">{t('common:app:dailyWeather')}</h1>
+    <div
+      className="flex flex-col text-slate-100 drop-shadow-sm mobile:gap-y-2 desktop:gap-y-20"
+      {...props}
+    >
+      <span className="text-white drop-shadow-md mobile:text-center mobile:text-xl desktop:ml-10 desktop:text-6xl">
+        {t('common:app:dailyWeather')}
+      </span>
       <div className="flex flex-wrap gap-4">
         {forcastday?.map(({ day, date }, index) => (
           <div key={index} className="flex-1 text-center">
-            <h3>{dayjs(date).format('dddd')}</h3>
+            <span className="mobile:text-base desktop:text-3xl">{dayjs(date).format('dddd')}</span>
             <div className="flex flex-col items-center justify-center gap-2">
               <img src={day?.condition.icon} alt={day?.condition.text} />
               <span className="text-xl">{day?.avgtemp_c} &deg;</span>
-              <p className="m-0 text-center text-sm drop-shadow-md">{day?.condition.text}</p>
+              <p className="m-0 text-center drop-shadow-md mobile:text-xs desktop:text-sm">
+                {day?.condition.text}
+              </p>
             </div>
           </div>
         ))}

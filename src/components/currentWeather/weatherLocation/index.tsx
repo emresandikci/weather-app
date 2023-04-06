@@ -9,8 +9,8 @@ interface IWeatherLocation {
 export default function WeatherLocation({ location, lastUpdateAt }: IWeatherLocation) {
   const { t } = useTranslation();
   return (
-    <div>
-      <span className="text-6xl drop-shadow-md">
+    <div className="flex flex-col gap-4">
+      <span className="drop-shadow-md mobile:text-3xl desktop:text-6xl">
         {location?.name} / {location?.country}
       </span>
       <div>
