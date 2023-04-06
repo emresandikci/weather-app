@@ -1,4 +1,4 @@
-import { DailyWeather, CurrentWeather, GeoLocationLoading } from 'components';
+import { DailyWeather, CurrentWeather, GeoLocationLoading, LanguageButton } from 'components';
 
 import { useGeoLocation, useGetIp, useInterval, useWindowBlurFocus } from 'hooks';
 import { useEffect, useState } from 'react';
@@ -73,6 +73,7 @@ function Home() {
     <div>
       {weather && (
         <div className="flex h-screen flex-col justify-between pb-20 children:m-5">
+          <LanguageButton />
           <DailyWeather forcastday={weather?.forecast?.forecastday} />
           <CurrentWeather weather={weather} className="mb-5" />
         </div>

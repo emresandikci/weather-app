@@ -128,7 +128,7 @@
 
 /* sizes */
 .btn.btn-lg {
-  @apply py-[14px] px-8
+  @apply px-8 py-[14px]
     text-base leading-6;
 }
 

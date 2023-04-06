@@ -17,5 +17,11 @@ export enum QUERY_KEY_TYPES {
   photo = 'photo',
 }
 
+export enum SIZES {
+  sm = 'sm',
+  md = 'md',
+  lg = 'lg',
+}
+
 export const DEFAULT_BACKGROUND =
   'https://images.pexels.com/photos/6249515/pexels-photo-6249515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
