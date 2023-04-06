@@ -10,7 +10,7 @@ export default function MainLayout({ children }: IBaseComponent) {
   const isFetching = useIsFetching();
   const { locationQuery } = useAppContext();
 
-  const { photoQueries } = usePhoto({ q: '' });
+  const { photoQueries } = usePhoto({ q: locationQuery || '' });
   const { data: photo } = photoQueries;
 
   return (
