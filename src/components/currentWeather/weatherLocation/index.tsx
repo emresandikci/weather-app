@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { ILocation } from 'models/current';
 
 interface IWeatherLocation {
-  location: ILocation;
-  lastUpdateAt: string;
+  location: ILocation | null | undefined;
+  lastUpdateAt: string | null | undefined;
 }
 export default function WeatherLocation({ location, lastUpdateAt }: IWeatherLocation) {
   const { t } = useTranslation();

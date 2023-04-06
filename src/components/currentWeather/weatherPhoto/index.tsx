@@ -1,7 +1,7 @@
 import { IWeatherCondition } from 'models/current';
 
 interface IWeatherPhoto {
-  condition: IWeatherCondition | null;
+  condition: IWeatherCondition | null | undefined;
 }
 export default function WeatherPhoto({ condition }: IWeatherPhoto) {
   return (

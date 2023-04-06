@@ -9,8 +9,6 @@ interface IDailyWeather extends IBaseComponent {
 export default function DailyWeather({ forcastday, ...props }: IDailyWeather) {
   const { t } = useTranslation(['common']);
 
-  if (!forcastday) return null;
-
   return (
     <div
       className="flex flex-col text-slate-100 drop-shadow-sm mobile:gap-y-2 desktop:gap-y-20"
