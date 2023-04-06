@@ -17,7 +17,9 @@ export default function MainLayout({ children }: IBaseComponent) {
     <div
       className="relative bg-cover bg-center"
       style={{
-        backgroundImage: `url('${photo ? photo?.hits[0].largeImageURL : DEFAULT_BACKGROUND}')`,
+        backgroundImage: `url('${
+          !!photo?.hits.length ? photo?.hits[0]?.largeImageURL : DEFAULT_BACKGROUND
+        }')`,
       }}
     >
       {!!isFetching && <Loading className="mt-14" />}
