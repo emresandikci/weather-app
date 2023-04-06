@@ -14,4 +14,8 @@ export enum HTTP_STATUS {
 export enum QUERY_KEY_TYPES {
   current = 'current',
   forecast = 'forecast',
+  photo = 'photo',
 }
+
+export const DEFAULT_BACKGROUND =
+  'https://images.pexels.com/photos/6249515/pexels-photo-6249515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
