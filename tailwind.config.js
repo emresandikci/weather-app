@@ -24,10 +24,27 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ addVariant }) {
+    plugin(function ({ addVariant, addUtilities }) {
       addVariant('children', '& > *');
       addVariant('svg', '& > svg');
       addVariant('input', '& > input');
+      addUtilities({
+        '.shadow-es': {
+          'box-shadow': '0px 4px 12px rgba(29, 29, 32, 0.08)',
+        },
+        '.shadow-es-l': {
+          'box-shadow': '-4px 0px 5px 0px rgba(29, 29, 32, 0.08)',
+        },
+        '.shadow-es-r': {
+          'box-shadow': '4px 0px 5px 0px rgba(29, 29, 32, 0.08)',
+        },
+        '.shadow-es-t': {
+          'box-shadow': '1px -2px 4px 0px rgba(29, 29, 32, 0.08)',
+        },
+        '.shadow-es-b': {
+          'box-shadow': '2px 4px 5px 0px  rgba(29, 29, 32, 0.08)',
+        },
+      });
     }),
   ],
 };
