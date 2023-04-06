@@ -3,6 +3,8 @@
   "message": {
     "fail": "Something went wrong!"
   },
+  "loading":"loading...",
+  "gettingLocationInformation":"Getting location information...",
   "errors": {
     "notFound": {
       "title": "404 Oops!",
@@ -11,6 +13,14 @@
     "notData": {
       "title": "No Data",
       "description": "Sorry, data is not exist."
-    }
+    },
+    "locationPermission":"Location permission didn't grant!"
+  },
+  "app":{
+    "dailyWeather":"Daily Weather",
+    "feelsLike":"Feels Like",
+    "wind":"Wind",
+    "humidity":"Humidity",
+    "updatedAt":"Updated At"
   }
 }

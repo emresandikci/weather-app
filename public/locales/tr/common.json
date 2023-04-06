@@ -3,6 +3,8 @@
   "message": {
     "fail": "Bir şeyler yanlış gitti!"
   },
+  "loading": "yükleniyor...",
+  "gettingLocationInformation":"Lokasyon bilgisi alınıyor...",
   "errors": {
     "notFound": {
       "title": "404 Hata!",
@@ -11,6 +13,14 @@
     "notData": {
       "title": "Veri Yok",
       "description": "Üzgünüz, veri mevcut değil."
-    }
+    },
+    "locationPermission": "Konum izini verilmedi!"
+  },
+  "app": {
+    "dailyWeather": "Günlük Hava Durumu",
+    "feelsLike": "Hissedilen Sıcaklık",
+    "wind": "Rüzgar",
+    "humidity": "Nem",
+    "updatedAt": "Güncelleme Tarihi"
   }
 }
