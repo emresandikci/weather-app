@@ -1,19 +1,37 @@
-import classNames from 'classnames';
-import { IBaseComponent } from 'models';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import classNames from 'classnames';
 
-export default function Loading({ className }: IBaseComponent) {
-  const { t } = useTranslation(['common']);
-
-  return (
-    <div
-      className={classNames(
-        'fixed z-10 flex h-full w-full items-center justify-center bg-transparent',
-        className
-      )}
-    >
-      <span className="text-md text-slate-300">{t('common:loading')}</span>
-    </div>
-  );
+interface ILoadingProps {
+  isLoading: boolean;
+  size?: 'xs' | 'sm' | 'md' | 'lg';
+  color?: 'green' | 'gray' | 'red' | 'yellow' | 'rose' | 'purple' | 'orange' | 'blue';
+  isButton?: boolean;
 }
+const Loading = ({
+  isLoading = true,
+  size = 'xs',
+  color = 'gray',
+  className = '',
+  isButton = false,
+}: ILoadingProps & React.HTMLAttributes<HTMLDivElement>) => {
+  const baseClassNames = classNames(
+    'loading spinner-border animate-spin inline-block rounded-full border-t-transparent',
+    {
+      [`spinner-size-${size}`]: size,
+      [`border-${color}-500`]: color && !isButton,
+      [`border-current`]: isButton,
+      [className]: className,
+    }
+  );
+  if (isLoading)
+    return (
+      <div className="flex items-center justify-center">
+        <div className={baseClassNames} role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  return <></>;
+};
+
+export default Loading;

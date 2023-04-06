@@ -3,6 +3,10 @@
   "message": {
     "fail": "Bir şeyler yanlış gitti!"
   },
+  "language":{
+    "en":"İngilizce",
+    "tr":"Türkçe"
+  },
   "loading": "yükleniyor...",
   "gettingLocationInformation":"Lokasyon bilgisi alınıyor...",
   "errors": {

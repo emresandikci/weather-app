@@ -3,6 +3,10 @@
   "message": {
     "fail": "Something went wrong!"
   },
+  "language":{
+    "en":"English",
+    "tr":"Turkish"
+  },
   "loading":"loading...",
   "gettingLocationInformation":"Getting location information...",
   "errors": {
