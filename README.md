@@ -1,5 +1,7 @@
 # Weather App
 
+## [You can access the here DEMO](https://weather-app-one-jet.vercel.app/)
+
 ## `Please read this section before starting to development.`
 
 <br>
@@ -63,7 +65,8 @@ git clone https://github.com/emresandikci/weather-app.git && cd weather-app && y
 Please create the **`.env`** file and add below environment key and a variable which shared with you as an API URL
 
 ```
-REACT_APP_API_BASE_URL=
+REACT_APP_API_BASE_URL=https://api.weatherapi.com/v1
+REACT_APP_WEATHER_API_KEY=<weather-api-client-key>
 ```
 
 after add the above environment key and variable that shared with you, run below script to start development and server.
