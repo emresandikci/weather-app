@@ -14,13 +14,15 @@ export class ForecastService implements IService<IForecastModel> {
     return ForecastService.instance;
   }
 
-  getAll(query: object): Promise<IForecastModel> {
-    return request.get(`/forecast.json`, {
-      params: {
-        key: process.env.REACT_APP_WEATHER_API_KEY,
-        ...query,
-      },
-    });
+  async getAll(query: object): Promise<IForecastModel> {
+    return await request
+      .get(`/forecast.json`, {
+        params: {
+          key: process.env.REACT_APP_WEATHER_API_KEY,
+          ...query,
+        },
+      })
+      .then((response) => response.data);
   }
 }
 
