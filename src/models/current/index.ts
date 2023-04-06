@@ -1,25 +1,12 @@
-export default interface ICurrentWeather {
-  location: {
-    name: string;
-    region: string;
-    country: string;
-    lat: number;
-    lon: number;
-    tz_id: string;
-    localtime_epoch: number;
-    localtime: string;
-  };
+export default interface ICurrent {
+  location: ILocation;
   current: {
     last_updated_epoch: number;
     last_updated: string;
     temp_c: number;
     temp_f: number;
     is_day: number;
-    condition: {
-      text: string;
-      icon: string;
-      code: number;
-    };
+    condition: IWeatherCondition;
     wind_mph: number;
     wind_kph: number;
     wind_degree: number;
@@ -38,4 +25,21 @@ export default interface ICurrentWeather {
     gust_mph: number;
     gust_kph: number;
   };
+}
+
+export interface ILocation {
+  name: string;
+  region: string;
+  country: string;
+  lat: number;
+  lon: number;
+  tz_id: string;
+  localtime_epoch: number;
+  localtime: string;
+}
+
+export interface IWeatherCondition {
+  text: string;
+  icon: string;
+  code: number;
 }
